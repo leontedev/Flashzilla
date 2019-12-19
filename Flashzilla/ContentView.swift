@@ -9,10 +9,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var timeString: String = "Timer"
+
     var body: some View {
-        Text("Hello, World!")
+        
+        VStack {
+            Text("\(timeString)")
+               .onReceive(timer) { time in
+                    self.timeString = "\(time)"
+               }.padding()
+            
+            Button(action: {
+                self.timer.upstream.connect().cancel()
+            }) {
+                Text("Stop Timer")
+            }.padding()
+        }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

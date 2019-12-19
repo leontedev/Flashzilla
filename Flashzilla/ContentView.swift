@@ -26,6 +26,12 @@ struct ContentView: View {
                 Text("Stop Timer")
             }.padding()
         }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+            print("Moving to the background!")
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            print("Moving back to the foreground!")
+        }
     }
 }
 

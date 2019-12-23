@@ -13,6 +13,8 @@
 		8997D00823AA282400A3ED1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8997D00723AA282400A3ED1F /* Assets.xcassets */; };
 		8997D00B23AA282400A3ED1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8997D00A23AA282400A3ED1F /* Preview Assets.xcassets */; };
 		8997D00E23AA282400A3ED1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8997D00C23AA282400A3ED1F /* LaunchScreen.storyboard */; };
+		8997D01623ACCF0A00A3ED1F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8997D01523ACCF0A00A3ED1F /* Card.swift */; };
+		8997D01A23ACD16000A3ED1F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8997D01923ACD16000A3ED1F /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8997D00A23AA282400A3ED1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8997D00D23AA282400A3ED1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8997D00F23AA282400A3ED1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8997D01523ACCF0A00A3ED1F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		8997D01923ACD16000A3ED1F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,10 @@
 		8997D00023AA281D00A3ED1F /* Flashzilla */ = {
 			isa = PBXGroup;
 			children = (
+				8997D01823ACCF1400A3ED1F /* View */,
+				8997D01723ACCF0D00A3ED1F /* Model */,
 				8997D00123AA281D00A3ED1F /* AppDelegate.swift */,
 				8997D00323AA281D00A3ED1F /* SceneDelegate.swift */,
-				8997D00523AA281D00A3ED1F /* ContentView.swift */,
 				8997D00723AA282400A3ED1F /* Assets.xcassets */,
 				8997D00C23AA282400A3ED1F /* LaunchScreen.storyboard */,
 				8997D00F23AA282400A3ED1F /* Info.plist */,
@@ -73,6 +78,23 @@
 				8997D00A23AA282400A3ED1F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8997D01723ACCF0D00A3ED1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8997D01523ACCF0A00A3ED1F /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8997D01823ACCF1400A3ED1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8997D00523AA281D00A3ED1F /* ContentView.swift */,
+				8997D01923ACD16000A3ED1F /* CardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +171,8 @@
 				8997D00223AA281D00A3ED1F /* AppDelegate.swift in Sources */,
 				8997D00423AA281D00A3ED1F /* SceneDelegate.swift in Sources */,
 				8997D00623AA281D00A3ED1F /* ContentView.swift in Sources */,
+				8997D01623ACCF0A00A3ED1F /* Card.swift in Sources */,
+				8997D01A23ACD16000A3ED1F /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.leonte.swiftui.Flashzilla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,7 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.leonte.swiftui.Flashzilla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

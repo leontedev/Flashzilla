@@ -15,7 +15,7 @@ struct CardView: View {
     @State var offset = CGSize.zero
     @State private var feedback = UINotificationFeedbackGenerator()
     let card: Card
-    var removal: (() -> Void)? = nil
+    var removal: ((_ isWrongAnswer: Bool) -> Void)? = nil
     
     
     var body: some View {
@@ -70,12 +70,13 @@ struct CardView: View {
                     if abs(self.offset.width) > 100 {
                         if self.offset.width > 0 {
                             self.feedback.notificationOccurred(.success)
+                            self.removal?(false)
                         } else {
                             self.feedback.notificationOccurred(.error)
+                            self.removal?(true)
                         }
                         
-                        self.removal?()
-                    } else {
+                                            } else {
                         self.offset = .zero
                     }
                 }

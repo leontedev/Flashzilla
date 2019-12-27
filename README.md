@@ -1,8 +1,10 @@
-# SwiftUI Project
+# Flashcards
 
-**Project description.**
+**Learn new things using flashcards.**
 
 ![](gif.gif)
 
 #### Technologies used:
-- SwiftUI
+- SwiftUI & Combine
+- UserDefaults
+- JSON encoding & decoding
